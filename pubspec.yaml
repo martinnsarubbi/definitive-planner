@@ -1,0 +1,32 @@
+name: definitive_planner
+description: Agenda modular multiplataforma con datos locales y diseño editable.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  shared_preferences: ^2.5.3
+  file_picker: ^13.1.0
+  flutter_markdown_plus: ^1.0.12
+  url_launcher: ^6.3.2
+  intl: any
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: PlannerEmoji
+      fonts:
+        - asset: assets/fonts/NotoColorEmoji.ttf

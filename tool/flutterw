@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Cloud-only writable caches; local machines can call their installed flutter directly.
+export PUB_CACHE="${PUB_CACHE:-/workspace/.toolchains/pub-cache}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-/workspace/.toolchains/config}"
+export CHROME_EXECUTABLE="${CHROME_EXECUTABLE:-/usr/bin/chromium}"
+export FLUTTER_SUPPRESS_ANALYTICS=true
+export DART_SUPPRESS_ANALYTICS=true
+export ANALYZER_STATE_LOCATION_OVERRIDE="${ANALYZER_STATE_LOCATION_OVERRIDE:-/workspace/.toolchains/analyzer}"
+exec "${FLUTTER_ROOT:-/workspace/.toolchains/flutter}/bin/flutter" "$@"
